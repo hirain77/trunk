@@ -30,9 +30,6 @@ public class DNA1969 {
 		});
 
 
-
-
-
 		System.out.println(ans);
 
 	}
