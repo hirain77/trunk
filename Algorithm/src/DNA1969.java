@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class DNA1969 {
 
-	static int N;
-	static int[][] I;
+	static int N, M;
+	static char[][] I;
 	static int ans;
 
 	public static void main(String args[]) throws Exception {
@@ -14,20 +14,16 @@ public class DNA1969 {
 		Scanner sc = new Scanner(System.in);
 
 		N = sc.nextInt();
+		M = sc.nextInt();
 
-		int I[][] = new int[N][2];
+		I = new char[N][M];
 		for (int i = 0; i < N; i++) {
-			I[i][0] = sc.nextInt();
-			I[i][1] = sc.nextInt();
+			I[i] = sc.next().toCharArray();
 		}
-
-		Arrays.sort(I, new Comparator<int[]>() {
-			public int compare(int[] o1, int[] o2) {
-				if (o1[1] == o2[1])
-					return o1[0] - o2[0];
-				return o1[1] - o2[1];
-			}
-		});
+		
+		ans =0;
+		
+		System.out.println(Arrays.deepToString(I));
 
 
 		System.out.println(ans);
